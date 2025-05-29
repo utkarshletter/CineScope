@@ -7,6 +7,26 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.brand-link {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.brand-title {
+  font-size: 2rem; /* bigger CineScope */
+  font-weight: 700;
+  color: #4a60f0; /* vibrant bluish purple */
+}
+
+.slogan {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,12 +42,27 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.2s;
+  color: #dddddd;
+  text-decoration: none;
 }
 
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.brand-link {
+  text-decoration: none;
+  color: #a259ff; /* Vibrant purple */
+}
+
+.slogan {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #cccccc; /* Soft gray */
+  margin-left: 0.5rem;
+}
+
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
@@ -43,5 +78,13 @@
 
   .nav-link {
     padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    display: block;
+    font-size: 0.75rem;
+    color: #aaaaaa;
   }
 }
