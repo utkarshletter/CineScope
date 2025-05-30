@@ -1,35 +1,33 @@
 .navbar {
-  background-color: #000000;
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .brand-link {
-  text-decoration: none;
   display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  flex-direction: column;
+  text-decoration: none;
 }
 
 .brand-title {
-  font-size: 2rem; /* bigger CineScope */
-  font-weight: 700;
-  color: #4a60f0; /* vibrant bluish purple */
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4a60f0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .slogan {
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 0.9rem;
   color: #cccccc;
-}
-
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .navbar-links {
@@ -38,53 +36,52 @@
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1rem;
+  font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-  color: #dddddd;
+  border-radius: 8px;
+  color: #eeeeee;
   text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: #4a60f0;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-.brand-link {
-  text-decoration: none;
-  color: #a259ff; /* Vibrant purple */
+.nav-link.active {
+  background-color: #4a60f0;
+  color: white;
 }
 
-.slogan {
-  font-size: 0.9rem;
-  font-weight: normal;
-  color: #cccccc; /* Soft gray */
-  margin-left: 0.5rem;
+.nav-icon {
+  font-size: 1.1rem;
 }
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem;
-  }
-
-  .navbar-brand {
-    font-size: 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navbar-links {
-    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .nav-link {
-    padding: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
   }
-}
 
-@media (max-width: 480px) {
-  .slogan {
-    display: block;
-    font-size: 0.75rem;
-    color: #aaaaaa;
+  .brand-link {
+    align-items: flex-start;
   }
 }
