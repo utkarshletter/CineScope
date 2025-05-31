@@ -27,3 +27,15 @@ export const searchMovies = async (query) => {
     console.log("Error in searchMovies...");
   }
 };
+
+export const getMovieDetails = async (id) => {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/movie/${id}?api_key=${API_KEY}`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Error in getMovieDetails...");
+  }
+};
